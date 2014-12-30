@@ -30,6 +30,10 @@ Partial Class Window
         Me.NetworkDataPacket = New System.Windows.Forms.Label()
         Me.IPv4 = New System.Windows.Forms.CheckBox()
         Me.IPv6 = New System.Windows.Forms.CheckBox()
+        Me.AmmountRequests = New System.Windows.Forms.TextBox()
+        Me.SetRequests = New System.Windows.Forms.Button()
+        Me.UnReq = New System.Windows.Forms.CheckBox()
+        Me.Reset = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'SetIP
@@ -43,9 +47,9 @@ Partial Class Window
         '
         'Ping
         '
-        Me.Ping.Location = New System.Drawing.Point(115, 96)
+        Me.Ping.Location = New System.Drawing.Point(9, 90)
         Me.Ping.Name = "Ping"
-        Me.Ping.Size = New System.Drawing.Size(75, 23)
+        Me.Ping.Size = New System.Drawing.Size(111, 23)
         Me.Ping.TabIndex = 1
         Me.Ping.Text = "Ping IP"
         Me.Ping.UseVisualStyleBackColor = True
@@ -91,7 +95,7 @@ Partial Class Window
         Me.IPv4.AutoSize = True
         Me.IPv4.Checked = True
         Me.IPv4.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.IPv4.Location = New System.Drawing.Point(21, 72)
+        Me.IPv4.Location = New System.Drawing.Point(126, 94)
         Me.IPv4.Name = "IPv4"
         Me.IPv4.Size = New System.Drawing.Size(78, 17)
         Me.IPv4.TabIndex = 7
@@ -101,19 +105,60 @@ Partial Class Window
         'IPv6
         '
         Me.IPv6.AutoSize = True
-        Me.IPv6.Location = New System.Drawing.Point(115, 72)
+        Me.IPv6.Location = New System.Drawing.Point(218, 94)
         Me.IPv6.Name = "IPv6"
         Me.IPv6.Size = New System.Drawing.Size(78, 17)
         Me.IPv6.TabIndex = 8
         Me.IPv6.Text = "Force IPv6"
         Me.IPv6.UseVisualStyleBackColor = True
         '
+        'AmmountRequests
+        '
+        Me.AmmountRequests.Location = New System.Drawing.Point(196, 42)
+        Me.AmmountRequests.Name = "AmmountRequests"
+        Me.AmmountRequests.Size = New System.Drawing.Size(100, 20)
+        Me.AmmountRequests.TabIndex = 9
+        Me.AmmountRequests.Text = "10"
+        Me.AmmountRequests.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'SetRequests
+        '
+        Me.SetRequests.Location = New System.Drawing.Point(196, 12)
+        Me.SetRequests.Name = "SetRequests"
+        Me.SetRequests.Size = New System.Drawing.Size(100, 23)
+        Me.SetRequests.TabIndex = 10
+        Me.SetRequests.Text = "Set Requests"
+        Me.SetRequests.UseVisualStyleBackColor = True
+        '
+        'UnReq
+        '
+        Me.UnReq.AutoSize = True
+        Me.UnReq.Location = New System.Drawing.Point(126, 71)
+        Me.UnReq.Name = "UnReq"
+        Me.UnReq.Size = New System.Drawing.Size(170, 17)
+        Me.UnReq.TabIndex = 11
+        Me.UnReq.Text = "Send Packets Till Host Stops?"
+        Me.UnReq.UseVisualStyleBackColor = True
+        '
+        'Reset
+        '
+        Me.Reset.Location = New System.Drawing.Point(9, 64)
+        Me.Reset.Name = "Reset"
+        Me.Reset.Size = New System.Drawing.Size(111, 23)
+        Me.Reset.TabIndex = 12
+        Me.Reset.Text = "Reset"
+        Me.Reset.UseVisualStyleBackColor = True
+        '
         'Window
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.ClientSize = New System.Drawing.Size(198, 131)
+        Me.ClientSize = New System.Drawing.Size(306, 117)
+        Me.Controls.Add(Me.Reset)
+        Me.Controls.Add(Me.UnReq)
+        Me.Controls.Add(Me.SetRequests)
+        Me.Controls.Add(Me.AmmountRequests)
         Me.Controls.Add(Me.IPv6)
         Me.Controls.Add(Me.IPv4)
         Me.Controls.Add(Me.NetworkDataPacket)
@@ -137,5 +182,9 @@ Partial Class Window
     Friend WithEvents NetworkDataPacket As System.Windows.Forms.Label
     Friend WithEvents IPv4 As System.Windows.Forms.CheckBox
     Friend WithEvents IPv6 As System.Windows.Forms.CheckBox
+    Friend WithEvents AmmountRequests As System.Windows.Forms.TextBox
+    Friend WithEvents SetRequests As System.Windows.Forms.Button
+    Friend WithEvents UnReq As System.Windows.Forms.CheckBox
+    Friend WithEvents Reset As System.Windows.Forms.Button
 
 End Class

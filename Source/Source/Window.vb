@@ -19,7 +19,23 @@
 
     Private Sub Ping_Click(sender As Object, e As EventArgs) Handles Ping.Click
         If (IPTemp <> "" And DataTemp <> "") Then
-            Process.Start("cmd.exe")
+            MyUtilities.RunCommandCom("Ping", IPTemp, DataTemp)
+        ElseIf (IPTemp = "" And DataTemp = "") Then
+            MsgBox("Please Set the IP and Packet Size")
+        ElseIf (IPTemp = "") Then
+            MsgBox("Please Set IP")
+        ElseIf (DataTemp = "") Then
+            MsgBox("Please Set Packet Size")
         End If
+    End Sub
+End Class
+Public Class MyUtilities
+    Shared Sub RunCommandCom(command As String, arguments As String, packetSize As String)
+        Dim p As Process = New Process()
+        Dim pi As ProcessStartInfo = New ProcessStartInfo()
+        pi.Arguments = " " + If("/K", "/C") + " " + command + " " + arguments + " -l " + packetSize
+        pi.FileName = "cmd.exe"
+        p.StartInfo = pi
+        p.Start()
     End Sub
 End Class

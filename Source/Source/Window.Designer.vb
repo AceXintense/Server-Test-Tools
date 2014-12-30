@@ -28,6 +28,8 @@ Partial Class Window
         Me.SetPacket = New System.Windows.Forms.Button()
         Me.DataPacket = New System.Windows.Forms.TextBox()
         Me.NetworkDataPacket = New System.Windows.Forms.Label()
+        Me.IPv4 = New System.Windows.Forms.CheckBox()
+        Me.IPv6 = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'SetIP
@@ -41,7 +43,7 @@ Partial Class Window
         '
         'Ping
         '
-        Me.Ping.Location = New System.Drawing.Point(115, 67)
+        Me.Ping.Location = New System.Drawing.Point(115, 96)
         Me.Ping.Name = "Ping"
         Me.Ping.Size = New System.Drawing.Size(75, 23)
         Me.Ping.TabIndex = 1
@@ -84,12 +86,36 @@ Partial Class Window
         Me.NetworkDataPacket.TabIndex = 6
         Me.NetworkDataPacket.Text = "Byte(s)"
         '
+        'IPv4
+        '
+        Me.IPv4.AutoSize = True
+        Me.IPv4.Checked = True
+        Me.IPv4.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.IPv4.Location = New System.Drawing.Point(21, 72)
+        Me.IPv4.Name = "IPv4"
+        Me.IPv4.Size = New System.Drawing.Size(78, 17)
+        Me.IPv4.TabIndex = 7
+        Me.IPv4.Text = "Force IPv4"
+        Me.IPv4.UseVisualStyleBackColor = True
+        '
+        'IPv6
+        '
+        Me.IPv6.AutoSize = True
+        Me.IPv6.Location = New System.Drawing.Point(115, 72)
+        Me.IPv6.Name = "IPv6"
+        Me.IPv6.Size = New System.Drawing.Size(78, 17)
+        Me.IPv6.TabIndex = 8
+        Me.IPv6.Text = "Force IPv6"
+        Me.IPv6.UseVisualStyleBackColor = True
+        '
         'Window
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.ClientSize = New System.Drawing.Size(198, 94)
+        Me.ClientSize = New System.Drawing.Size(198, 131)
+        Me.Controls.Add(Me.IPv6)
+        Me.Controls.Add(Me.IPv4)
         Me.Controls.Add(Me.NetworkDataPacket)
         Me.Controls.Add(Me.DataPacket)
         Me.Controls.Add(Me.SetPacket)
@@ -109,5 +135,7 @@ Partial Class Window
     Friend WithEvents SetPacket As System.Windows.Forms.Button
     Friend WithEvents DataPacket As System.Windows.Forms.TextBox
     Friend WithEvents NetworkDataPacket As System.Windows.Forms.Label
+    Friend WithEvents IPv4 As System.Windows.Forms.CheckBox
+    Friend WithEvents IPv6 As System.Windows.Forms.CheckBox
 
 End Class

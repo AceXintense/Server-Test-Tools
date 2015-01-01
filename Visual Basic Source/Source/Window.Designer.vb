@@ -50,7 +50,7 @@ Partial Class Window
         '
         Me.Ping.Location = New System.Drawing.Point(9, 90)
         Me.Ping.Name = "Ping"
-        Me.Ping.Size = New System.Drawing.Size(111, 23)
+        Me.Ping.Size = New System.Drawing.Size(69, 23)
         Me.Ping.TabIndex = 1
         Me.Ping.Text = "Ping IP"
         Me.Ping.UseVisualStyleBackColor = True
@@ -96,7 +96,7 @@ Partial Class Window
         Me.IPv4.AutoSize = True
         Me.IPv4.Checked = True
         Me.IPv4.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.IPv4.Location = New System.Drawing.Point(126, 94)
+        Me.IPv4.Location = New System.Drawing.Point(84, 94)
         Me.IPv4.Name = "IPv4"
         Me.IPv4.Size = New System.Drawing.Size(78, 17)
         Me.IPv4.TabIndex = 7
@@ -106,7 +106,7 @@ Partial Class Window
         'IPv6
         '
         Me.IPv6.AutoSize = True
-        Me.IPv6.Location = New System.Drawing.Point(218, 94)
+        Me.IPv6.Location = New System.Drawing.Point(168, 94)
         Me.IPv6.Name = "IPv6"
         Me.IPv6.Size = New System.Drawing.Size(78, 17)
         Me.IPv6.TabIndex = 8
@@ -134,7 +134,7 @@ Partial Class Window
         'UnReq
         '
         Me.UnReq.AutoSize = True
-        Me.UnReq.Location = New System.Drawing.Point(126, 71)
+        Me.UnReq.Location = New System.Drawing.Point(84, 71)
         Me.UnReq.Name = "UnReq"
         Me.UnReq.Size = New System.Drawing.Size(170, 17)
         Me.UnReq.TabIndex = 11
@@ -145,7 +145,7 @@ Partial Class Window
         '
         Me.Reset.Location = New System.Drawing.Point(9, 64)
         Me.Reset.Name = "Reset"
-        Me.Reset.Size = New System.Drawing.Size(111, 23)
+        Me.Reset.Size = New System.Drawing.Size(69, 23)
         Me.Reset.TabIndex = 12
         Me.Reset.Text = "Reset"
         Me.Reset.UseVisualStyleBackColor = True
@@ -180,7 +180,7 @@ Partial Class Window
         Me.Controls.Add(Me.SetIP)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "Window"
-        Me.Text = "Server Test Tools"
+        Me.Text = "Server Test Tool Kit"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

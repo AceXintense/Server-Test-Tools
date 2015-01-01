@@ -9,10 +9,12 @@
   <ItemGroup>
     <ClInclude Include="resource.h" />
     <ClInclude Include="ServerTestToolsApp.h" />
+    <ClInclude Include="ServerTestToolsFrame.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ServerTestToolsApp.cpp" />
+    <ClCompile Include="ServerTestToolsFrame.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>

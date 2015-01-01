@@ -9,6 +9,7 @@ class CServerTestToolsFrame : public CFrameWnd
 {
 public:
 	CServerTestToolsFrame();
+	BOOL PreCreateWindow(CREATESTRUCT& cs);
 
 	DECLARE_MESSAGE_MAP()
 };

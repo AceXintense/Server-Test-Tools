@@ -27,3 +27,4 @@ int CServerTestToolsApp::ExitInstance()
 
 	return CWinApp::ExitInstance();
 }
+

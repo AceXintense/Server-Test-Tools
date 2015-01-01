@@ -18,3 +18,4 @@ public:
 };
 
 extern CServerTestToolsApp theApp;
+

@@ -34,7 +34,6 @@ Partial Class Window
         Me.SetRequests = New System.Windows.Forms.Button()
         Me.UnReq = New System.Windows.Forms.CheckBox()
         Me.Reset = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'SetIP
@@ -150,22 +149,12 @@ Partial Class Window
         Me.Reset.Text = "Reset"
         Me.Reset.UseVisualStyleBackColor = True
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(241, 117)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(55, 23)
-        Me.Button1.TabIndex = 13
-        Me.Button1.Text = "Donate"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'Window
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.ClientSize = New System.Drawing.Size(304, 151)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(304, 120)
         Me.Controls.Add(Me.Reset)
         Me.Controls.Add(Me.UnReq)
         Me.Controls.Add(Me.SetRequests)
@@ -197,6 +186,5 @@ Partial Class Window
     Friend WithEvents SetRequests As System.Windows.Forms.Button
     Friend WithEvents UnReq As System.Windows.Forms.CheckBox
     Friend WithEvents Reset As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
 
 End Class

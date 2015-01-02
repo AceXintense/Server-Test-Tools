@@ -13,3 +13,10 @@ E:\Server Test Tools\Visual Basic Source\Source\bin\Debug\Source.exe.config
 E:\Server Test Tools\Visual Basic Source\Source\obj\Debug\Source.exe
 E:\Server Test Tools\Visual Basic Source\Source\obj\Debug\Source.xml
 E:\Server Test Tools\Visual Basic Source\Source\obj\Debug\Source.pdb
+E:\Server Test Tools\Visual Basic Source\Source\bin\Debug\Source.exe
+E:\Server Test Tools\Visual Basic Source\Source\bin\Debug\Source.pdb
+E:\Server Test Tools\Visual Basic Source\Source\bin\Debug\Source.xml
+E:\Server Test Tools\Visual Basic Source\Source\obj\Debug\Source.vbprojResolveAssemblyReference.cache
+E:\Server Test Tools\Visual Basic Source\Source\obj\Debug\Source.Window.resources
+E:\Server Test Tools\Visual Basic Source\Source\obj\Debug\Source.Resources.resources
+E:\Server Test Tools\Visual Basic Source\Source\obj\Debug\Source.vbproj.GenerateResource.Cache

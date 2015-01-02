@@ -15,11 +15,12 @@
     End Sub
 
     Private Sub Window_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        MsgBox("Thanks for using Server Test Tools By AceXintense")
+        MsgBox("Thanks for using Server Test Toolkit By AceXintense")
     End Sub
 
     Private Sub SetRequests_Click(sender As Object, e As EventArgs) Handles SetRequests.Click
         ReqTemp = AmmountRequests.Text
+        MsgBox("Is this Request Ammount Correct? " & ReqTemp)
     End Sub
 
     Private Sub Ping_Click(sender As Object, e As EventArgs) Handles Ping.Click

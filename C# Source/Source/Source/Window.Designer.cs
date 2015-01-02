@@ -37,9 +37,9 @@
             this.UnReq = new System.Windows.Forms.CheckBox();
             this.IPv6 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.IP = new System.Windows.Forms.TextBox();
             this.DataPacket = new System.Windows.Forms.TextBox();
+            this.SetIP = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SetPacket
@@ -60,6 +60,7 @@
             this.SetRequests.TabIndex = 2;
             this.SetRequests.Text = "Set Requests";
             this.SetRequests.UseVisualStyleBackColor = true;
+            this.SetRequests.Click += new System.EventHandler(this.SetRequests_Click);
             // 
             // Reset
             // 
@@ -69,6 +70,7 @@
             this.Reset.TabIndex = 3;
             this.Reset.Text = "Reset";
             this.Reset.UseVisualStyleBackColor = true;
+            this.Reset.Click += new System.EventHandler(this.Reset_Click);
             // 
             // Ping
             // 
@@ -78,6 +80,7 @@
             this.Ping.TabIndex = 4;
             this.Ping.Text = "Ping IP";
             this.Ping.UseVisualStyleBackColor = true;
+            this.Ping.Click += new System.EventHandler(this.Ping_Click);
             // 
             // AmmountRequests
             // 
@@ -100,6 +103,7 @@
             this.IPv4.TabIndex = 9;
             this.IPv4.Text = "Force IPv4";
             this.IPv4.UseVisualStyleBackColor = true;
+            this.IPv4.CheckedChanged += new System.EventHandler(this.IPv4_CheckedChanged);
             // 
             // UnReq
             // 
@@ -110,6 +114,7 @@
             this.UnReq.TabIndex = 10;
             this.UnReq.Text = "Send Packets Till Host Stops?";
             this.UnReq.UseVisualStyleBackColor = true;
+            this.UnReq.CheckedChanged += new System.EventHandler(this.UnReq_CheckedChanged);
             // 
             // IPv6
             // 
@@ -120,6 +125,7 @@
             this.IPv6.TabIndex = 11;
             this.IPv6.Text = "Force IPv6";
             this.IPv6.UseVisualStyleBackColor = true;
+            this.IPv6.CheckedChanged += new System.EventHandler(this.IPv6_CheckedChanged);
             // 
             // label1
             // 
@@ -130,15 +136,6 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Byte(s)";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Set IP";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // IP
             // 
             this.IP.Location = new System.Drawing.Point(12, 41);
@@ -147,6 +144,7 @@
             this.IP.TabIndex = 14;
             this.IP.Text = "192.168.0.1";
             this.IP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.IP.TextChanged += new System.EventHandler(this.IP_TextChanged);
             // 
             // DataPacket
             // 
@@ -156,16 +154,28 @@
             this.DataPacket.TabIndex = 15;
             this.DataPacket.Text = "10";
             this.DataPacket.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.DataPacket.TextChanged += new System.EventHandler(this.DataPacket_TextChanged);
+            // 
+            // SetIP
+            // 
+            this.SetIP.BackColor = System.Drawing.SystemColors.Control;
+            this.SetIP.Location = new System.Drawing.Point(12, 12);
+            this.SetIP.Name = "SetIP";
+            this.SetIP.Size = new System.Drawing.Size(100, 23);
+            this.SetIP.TabIndex = 16;
+            this.SetIP.Text = "Set IP";
+            this.SetIP.UseVisualStyleBackColor = false;
+            this.SetIP.Click += new System.EventHandler(this.SetIP_Click);
             // 
             // Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(304, 151);
+            this.ClientSize = new System.Drawing.Size(304, 133);
+            this.Controls.Add(this.SetIP);
             this.Controls.Add(this.DataPacket);
             this.Controls.Add(this.IP);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.IPv6);
             this.Controls.Add(this.UnReq);
@@ -200,9 +210,9 @@
         private System.Windows.Forms.CheckBox UnReq;
         private System.Windows.Forms.CheckBox IPv6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox IP;
         private System.Windows.Forms.TextBox DataPacket;
+        private System.Windows.Forms.Button SetIP;
     }
 }
 

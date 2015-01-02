@@ -7,3 +7,12 @@ E:\Server Test Tools\C# Source\Source\Source\obj\Debug\Source.csproj.GenerateRes
 E:\Server Test Tools\C# Source\Source\Source\obj\Debug\Source.exe
 E:\Server Test Tools\C# Source\Source\Source\obj\Debug\Source.pdb
 E:\Server Test Tools\C# Source\Source\Source\obj\Debug\Source.Window.resources
+E:\Server Test Tools Experimental Features\C# Source\Source\Source\bin\Debug\Source.exe.config
+E:\Server Test Tools Experimental Features\C# Source\Source\Source\obj\Debug\Source.csprojResolveAssemblyReference.cache
+E:\Server Test Tools Experimental Features\C# Source\Source\Source\obj\Debug\Source.Window.resources
+E:\Server Test Tools Experimental Features\C# Source\Source\Source\obj\Debug\Source.Properties.Resources.resources
+E:\Server Test Tools Experimental Features\C# Source\Source\Source\obj\Debug\Source.csproj.GenerateResource.Cache
+E:\Server Test Tools Experimental Features\C# Source\Source\Source\bin\Debug\Source.exe
+E:\Server Test Tools Experimental Features\C# Source\Source\Source\bin\Debug\Source.pdb
+E:\Server Test Tools Experimental Features\C# Source\Source\Source\obj\Debug\Source.exe
+E:\Server Test Tools Experimental Features\C# Source\Source\Source\obj\Debug\Source.pdb

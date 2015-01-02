@@ -13,7 +13,7 @@ namespace Source
 {
     public partial class Window : Form
     {
-        public string IPTemp = "192.168.0.1";
+        public string IPTemp = "localhost";
         public string DataTemp = "10";
         public string ReqTemp = "10";
         public Window()
@@ -25,22 +25,20 @@ namespace Source
         {
             MessageBox.Show("Thanks for Using Server Test Toolkit By AceXintense", "Thanks", MessageBoxButtons.OK);
         }
-        private void SetIP_Click(object sender, EventArgs e)
+
+        private void IP_TextChanged(object sender, EventArgs e)
         {
             IPTemp = IP.Text;
-            MessageBox.Show("Is this IP Correct? " + IPTemp, "IP Correct?", MessageBoxButtons.OK);
         }
 
-        private void SetPacket_Click(object sender, EventArgs e)
+        private void DataPacket_TextChanged(object sender, EventArgs e)
         {
             DataTemp = DataPacket.Text;
-            MessageBox.Show("Is this Packet Size Correct? " + DataTemp + " Byte(s)", "Byte(s) Size?", MessageBoxButtons.OK);
         }
 
-        private void SetRequests_Click(object sender, EventArgs e)
+        private void AmmountRequests_TextChanged(object sender, EventArgs e)
         {
             ReqTemp = AmmountRequests.Text;
-            MessageBox.Show("Is this Request Ammount Correct? " + ReqTemp, "Request Ammount?", MessageBoxButtons.OK);
         }
 
         private void Ping_Click(object sender, EventArgs e)
@@ -120,11 +118,11 @@ namespace Source
 
         private void Reset_Click(object sender, EventArgs e)
         {
-            IPTemp = "192.168.0.1";
+            IPTemp = "localhost";
             DataTemp = "10";
             ReqTemp = "10";
             DataPacket.Text = "10";
-            IP.Text = "192.168.0.1";
+            IP.Text = "localhost";
             AmmountRequests.Text = "10";
             IPv4.Checked = true;
             IPv6.Checked = false;
@@ -132,31 +130,14 @@ namespace Source
 
         }
 
-        private void AmmountRequests_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void IP_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DataPacket_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void UnReq_CheckedChanged(object sender, EventArgs e)
         {
             if (UnReq.Checked == true)
             {
-                SetRequests.Enabled = false;
                 AmmountRequests.Enabled = false;
             }
             if(UnReq.Checked == false)
             {
-                SetRequests.Enabled = true;
                 AmmountRequests.Enabled = true;
             }
         }

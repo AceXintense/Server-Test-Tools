@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SetPacket = new System.Windows.Forms.Button();
-            this.SetRequests = new System.Windows.Forms.Button();
             this.Reset = new System.Windows.Forms.Button();
             this.Ping = new System.Windows.Forms.Button();
             this.AmmountRequests = new System.Windows.Forms.TextBox();
@@ -39,32 +37,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.IP = new System.Windows.Forms.TextBox();
             this.DataPacket = new System.Windows.Forms.TextBox();
-            this.SetIP = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // SetPacket
-            // 
-            this.SetPacket.Location = new System.Drawing.Point(118, 12);
-            this.SetPacket.Name = "SetPacket";
-            this.SetPacket.Size = new System.Drawing.Size(75, 23);
-            this.SetPacket.TabIndex = 1;
-            this.SetPacket.Text = "Set Packet";
-            this.SetPacket.UseVisualStyleBackColor = true;
-            this.SetPacket.Click += new System.EventHandler(this.SetPacket_Click);
-            // 
-            // SetRequests
-            // 
-            this.SetRequests.Location = new System.Drawing.Point(199, 12);
-            this.SetRequests.Name = "SetRequests";
-            this.SetRequests.Size = new System.Drawing.Size(93, 23);
-            this.SetRequests.TabIndex = 2;
-            this.SetRequests.Text = "Set Requests";
-            this.SetRequests.UseVisualStyleBackColor = true;
-            this.SetRequests.Click += new System.EventHandler(this.SetRequests_Click);
             // 
             // Reset
             // 
-            this.Reset.Location = new System.Drawing.Point(12, 72);
+            this.Reset.Location = new System.Drawing.Point(12, 59);
             this.Reset.Name = "Reset";
             this.Reset.Size = new System.Drawing.Size(75, 23);
             this.Reset.TabIndex = 3;
@@ -74,7 +54,7 @@
             // 
             // Ping
             // 
-            this.Ping.Location = new System.Drawing.Point(12, 101);
+            this.Ping.Location = new System.Drawing.Point(12, 88);
             this.Ping.Name = "Ping";
             this.Ping.Size = new System.Drawing.Size(75, 23);
             this.Ping.TabIndex = 4;
@@ -84,7 +64,7 @@
             // 
             // AmmountRequests
             // 
-            this.AmmountRequests.Location = new System.Drawing.Point(199, 41);
+            this.AmmountRequests.Location = new System.Drawing.Point(199, 28);
             this.AmmountRequests.Name = "AmmountRequests";
             this.AmmountRequests.Size = new System.Drawing.Size(93, 20);
             this.AmmountRequests.TabIndex = 8;
@@ -97,7 +77,7 @@
             this.IPv4.AutoSize = true;
             this.IPv4.Checked = true;
             this.IPv4.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.IPv4.Location = new System.Drawing.Point(93, 105);
+            this.IPv4.Location = new System.Drawing.Point(93, 92);
             this.IPv4.Name = "IPv4";
             this.IPv4.Size = new System.Drawing.Size(78, 17);
             this.IPv4.TabIndex = 9;
@@ -108,7 +88,7 @@
             // UnReq
             // 
             this.UnReq.AutoSize = true;
-            this.UnReq.Location = new System.Drawing.Point(93, 76);
+            this.UnReq.Location = new System.Drawing.Point(93, 63);
             this.UnReq.Name = "UnReq";
             this.UnReq.Size = new System.Drawing.Size(170, 17);
             this.UnReq.TabIndex = 10;
@@ -119,7 +99,7 @@
             // IPv6
             // 
             this.IPv6.AutoSize = true;
-            this.IPv6.Location = new System.Drawing.Point(185, 105);
+            this.IPv6.Location = new System.Drawing.Point(185, 92);
             this.IPv6.Name = "IPv6";
             this.IPv6.Size = new System.Drawing.Size(78, 17);
             this.IPv6.TabIndex = 11;
@@ -130,7 +110,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(154, 44);
+            this.label1.Location = new System.Drawing.Point(154, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 12;
@@ -138,17 +118,17 @@
             // 
             // IP
             // 
-            this.IP.Location = new System.Drawing.Point(12, 41);
+            this.IP.Location = new System.Drawing.Point(12, 28);
             this.IP.Name = "IP";
             this.IP.Size = new System.Drawing.Size(100, 20);
             this.IP.TabIndex = 14;
-            this.IP.Text = "192.168.0.1";
+            this.IP.Text = "localhost";
             this.IP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.IP.TextChanged += new System.EventHandler(this.IP_TextChanged);
             // 
             // DataPacket
             // 
-            this.DataPacket.Location = new System.Drawing.Point(118, 41);
+            this.DataPacket.Location = new System.Drawing.Point(118, 28);
             this.DataPacket.Name = "DataPacket";
             this.DataPacket.Size = new System.Drawing.Size(30, 20);
             this.DataPacket.TabIndex = 15;
@@ -156,24 +136,42 @@
             this.DataPacket.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.DataPacket.TextChanged += new System.EventHandler(this.DataPacket_TextChanged);
             // 
-            // SetIP
+            // label2
             // 
-            this.SetIP.BackColor = System.Drawing.SystemColors.Control;
-            this.SetIP.Location = new System.Drawing.Point(12, 12);
-            this.SetIP.Name = "SetIP";
-            this.SetIP.Size = new System.Drawing.Size(100, 23);
-            this.SetIP.TabIndex = 16;
-            this.SetIP.Text = "Set IP";
-            this.SetIP.UseVisualStyleBackColor = false;
-            this.SetIP.Click += new System.EventHandler(this.SetIP_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(29, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "IP Address";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(124, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 13);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Packet Size";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(201, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 13);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Request Attempts";
             // 
             // Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(304, 133);
-            this.Controls.Add(this.SetIP);
+            this.ClientSize = new System.Drawing.Size(304, 122);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.DataPacket);
             this.Controls.Add(this.IP);
             this.Controls.Add(this.label1);
@@ -183,8 +181,6 @@
             this.Controls.Add(this.AmmountRequests);
             this.Controls.Add(this.Ping);
             this.Controls.Add(this.Reset);
-            this.Controls.Add(this.SetRequests);
-            this.Controls.Add(this.SetPacket);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -201,8 +197,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button SetPacket;
-        private System.Windows.Forms.Button SetRequests;
         private System.Windows.Forms.Button Reset;
         private System.Windows.Forms.Button Ping;
         private System.Windows.Forms.TextBox AmmountRequests;
@@ -212,7 +206,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox IP;
         private System.Windows.Forms.TextBox DataPacket;
-        private System.Windows.Forms.Button SetIP;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 

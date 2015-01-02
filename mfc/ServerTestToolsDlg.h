@@ -23,5 +23,6 @@ public:
 
 	DECLARE_MESSAGE_MAP()
 	afx_msg void OnBnClickedReset();
+	afx_msg void OnBnClickedPing();
 };
 

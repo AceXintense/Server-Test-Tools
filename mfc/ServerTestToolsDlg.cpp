@@ -4,6 +4,7 @@
 
 BEGIN_MESSAGE_MAP(CServerTestToolsDlg, CDialog)
 	ON_BN_CLICKED(CB_RESET, &CServerTestToolsDlg::OnBnClickedReset)
+	ON_BN_CLICKED(CB_PING , &CServerTestToolsDlg::OnBnClickedPing)
 END_MESSAGE_MAP()
 
 CServerTestToolsDlg::CServerTestToolsDlg(CWnd* pParent) : CDialog(CServerTestToolsDlg::IDD, pParent)
@@ -39,5 +40,20 @@ void CServerTestToolsDlg::OnOK()
 void CServerTestToolsDlg::OnBnClickedReset()
 {
 	ResetControls();
+}
+
+void CServerTestToolsDlg::OnBnClickedPing()
+{
+	CString strIPAddress;
+	CString strPacketSize;
+	CString strPacketCount;
+	CString strCommandLine;
+	m_pIPAddress->GetWindowTextW(strIPAddress);
+	m_pPacketSize->GetWindowTextW(strPacketSize);
+	m_pPacketCount->GetWindowTextW(strPacketCount);
+
+	strCommandLine = L"ping " + strIPAddress + " -n " + strPacketCount + " -l " + strPacketSize;
+	CStringA charStr(strCommandLine);
+	system(charStr);
 }
 

@@ -1,6 +1,7 @@
 
 #include "stdafx.h"
 #include "ServerTestToolsApp.h"
+#include "ServerTestToolsDlg.h"
 
 CServerTestToolsApp theApp;
 
@@ -12,19 +13,18 @@ CServerTestToolsApp::CServerTestToolsApp()
 
 BOOL CServerTestToolsApp::InitInstance()
 {
-	m_pMainWnd = new CServerTestToolsFrame;
+	CWinApp::InitInstance();
+	InitCommonControls();
 
-	m_pMainWnd->ShowWindow(SW_NORMAL);
-	m_pMainWnd->UpdateWindow();
+	CServerTestToolsDlg dlg;
+	m_pMainWnd = &dlg;
+	dlg.DoModal();
 
-	return CWinApp::InitInstance();
+	return FALSE;
 }
 
 int CServerTestToolsApp::ExitInstance()
 {
-	if(m_pMainWnd)
-		delete m_pMainWnd;
-
 	return CWinApp::ExitInstance();
 }
 

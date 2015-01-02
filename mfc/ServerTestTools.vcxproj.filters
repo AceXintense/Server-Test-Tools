@@ -21,7 +21,7 @@
     <ClInclude Include="resource.h">
       <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="ServerTestToolsFrame.h">
+    <ClInclude Include="ServerTestToolsDlg.h">
       <Filter>Include</Filter>
     </ClInclude>
   </ItemGroup>
@@ -32,7 +32,7 @@
     <ClCompile Include="ServerTestToolsApp.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="ServerTestToolsFrame.cpp">
+    <ClCompile Include="ServerTestToolsDlg.cpp">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>

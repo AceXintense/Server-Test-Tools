@@ -5,8 +5,6 @@
 #	error Include stdafx.h
 #endif
 
-#include "ServerTestToolsFrame.h"
-
 class CServerTestToolsApp : public CWinApp
 {
 public:

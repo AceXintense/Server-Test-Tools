@@ -264,6 +264,10 @@ header.dark nav ul li a:hover{
     color: #919191;
 }
 
+h3 a {
+    color: #0099FF;
+    text-decoration: none;
+}
 
 
 

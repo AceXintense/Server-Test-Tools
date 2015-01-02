@@ -7,9 +7,15 @@
 
 class CServerTestToolsDlg : public CDialog
 {
+private:
+	CIPAddressCtrl* m_pIPAddress;
+	CEdit* m_pPacketSize;
+	CEdit* m_pPacketCount;
+	CButton* m_pPing;
 public:
 	CServerTestToolsDlg(CWnd* pParent = NULL);
 	BOOL OnInitDialog();
+	void ResetControls();
 
 	enum { IDD = IDD_SERVERTESTTOOLS };
 

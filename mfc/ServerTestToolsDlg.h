@@ -22,5 +22,6 @@ public:
 	enum { IDD = IDD_SERVERTESTTOOLS };
 
 	DECLARE_MESSAGE_MAP()
+	afx_msg void OnBnClickedReset();
 };
 

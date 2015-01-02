@@ -3,6 +3,7 @@
 #include "ServerTestToolsDlg.h"
 
 BEGIN_MESSAGE_MAP(CServerTestToolsDlg, CDialog)
+	ON_BN_CLICKED(CB_RESET, &CServerTestToolsDlg::OnBnClickedReset)
 END_MESSAGE_MAP()
 
 CServerTestToolsDlg::CServerTestToolsDlg(CWnd* pParent) : CDialog(CServerTestToolsDlg::IDD, pParent)
@@ -33,5 +34,10 @@ void CServerTestToolsDlg::ResetControls()
 void CServerTestToolsDlg::OnOK()
 {
 	// Don't close the dialog when return has been pressed
+}
+
+void CServerTestToolsDlg::OnBnClickedReset()
+{
+	ResetControls();
 }
 

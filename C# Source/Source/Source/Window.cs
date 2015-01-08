@@ -23,6 +23,7 @@ namespace Source
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            TransparencyAmmount.Text = "Transparency = " + 100 + "%";
             MessageBox.Show("Thanks for Using Server Test Toolkit By AceXintense", "Thanks", MessageBoxButtons.OK);
         }
 
@@ -158,6 +159,25 @@ namespace Source
                 IPv4.Checked = false;
 
             }
+        }
+
+        private void Opacity_CheckedChanged(object sender, EventArgs e)
+        {
+            if(OpacityCheck.Checked == true)
+            {
+                this.Opacity = .75;
+                TransparencyAmmount.Text = "Transparency = " + 75 + "%";
+            }
+            if (OpacityCheck.Checked == false)
+            {
+                this.Opacity = 100;
+                TransparencyAmmount.Text = "Transparency = " + 100 + "%";
+            }
+        }
+
+        private void TransparencyAmmount_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

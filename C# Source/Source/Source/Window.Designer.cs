@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Window));
             this.Reset = new System.Windows.Forms.Button();
             this.Ping = new System.Windows.Forms.Button();
             this.AmmountRequests = new System.Windows.Forms.TextBox();
@@ -40,6 +41,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.OpacityCheck = new System.Windows.Forms.CheckBox();
+            this.TransparencyAmmount = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Reset
@@ -99,7 +102,7 @@
             // IPv6
             // 
             this.IPv6.AutoSize = true;
-            this.IPv6.Location = new System.Drawing.Point(185, 92);
+            this.IPv6.Location = new System.Drawing.Point(167, 92);
             this.IPv6.Name = "IPv6";
             this.IPv6.Size = new System.Drawing.Size(78, 17);
             this.IPv6.TabIndex = 11;
@@ -163,12 +166,35 @@
             this.label4.TabIndex = 18;
             this.label4.Text = "Request Attempts";
             // 
+            // OpacityCheck
+            // 
+            this.OpacityCheck.AutoSize = true;
+            this.OpacityCheck.Location = new System.Drawing.Point(15, 133);
+            this.OpacityCheck.Name = "OpacityCheck";
+            this.OpacityCheck.Size = new System.Drawing.Size(89, 17);
+            this.OpacityCheck.TabIndex = 19;
+            this.OpacityCheck.Text = "Transparent?";
+            this.OpacityCheck.UseVisualStyleBackColor = true;
+            this.OpacityCheck.CheckedChanged += new System.EventHandler(this.Opacity_CheckedChanged);
+            // 
+            // TransparencyAmmount
+            // 
+            this.TransparencyAmmount.AutoSize = true;
+            this.TransparencyAmmount.Location = new System.Drawing.Point(12, 117);
+            this.TransparencyAmmount.Name = "TransparencyAmmount";
+            this.TransparencyAmmount.Size = new System.Drawing.Size(84, 13);
+            this.TransparencyAmmount.TabIndex = 20;
+            this.TransparencyAmmount.Text = "Transparency = ";
+            this.TransparencyAmmount.Click += new System.EventHandler(this.TransparencyAmmount_Click);
+            // 
             // Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(304, 122);
+            this.ClientSize = new System.Drawing.Size(307, 162);
+            this.Controls.Add(this.TransparencyAmmount);
+            this.Controls.Add(this.OpacityCheck);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -182,12 +208,13 @@
             this.Controls.Add(this.Ping);
             this.Controls.Add(this.Reset);
             this.Cursor = System.Windows.Forms.Cursors.Default;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Window";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Server Test Tool Kit";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -209,6 +236,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox OpacityCheck;
+        private System.Windows.Forms.Label TransparencyAmmount;
     }
 }
 
